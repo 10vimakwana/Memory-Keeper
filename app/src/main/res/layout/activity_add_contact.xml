@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/ly_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg">
+        <!-- <com.google.android.material.appbar.AppBarLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+             android:background="@android:color/transparent"
+             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+             <com.google.android.material.appbar.CollapsingToolbarLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 app:contentScrim="?attr/colorPrimary"
+                 app:expandedTitleMarginEnd="64dp"
+                 app:expandedTitleMarginStart="48dp"
+                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                   </com.google.android.material.appbar.CollapsingToolbarLayout>
+         </com.google.android.material.appbar.AppBarLayout>
+ -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="10dp"
+            android:fillViewport="true"
+            android:paddingBottom="30dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_image_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/user_default" />
+
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.tanvi.iremeberyou.font.FontTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name" />
+
+                    <com.tanvi.iremeberyou.font.FontTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" *"
+                        android:textColor="#FF0101" />
+                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical">
+
+                        <!--  <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="10dp"
+                           android:orientation="horizontal"
+                           android:paddingLeft="5dp">
+
+                           <com.tanvi.iremeberyou.font.FontTextViewBold
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Name"
+                               android:textColor="@color/blue" />
+
+                           <com.tanvi.iremeberyou.font.FontTextViewBold
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text=" *"
+                               android:textColor="#FF0101" />
+                       </LinearLayout>-->
+
+                        <com.tanvi.memorykeeper.font.FontEditText
+                            android:id="@+id/ed_name"
+                            android:layout_width="match_parent"
+                       android:drawableLeft="@drawable/ic_user"
+                            android:drawablePadding="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="0.15"
+                            android:background="@drawable/bg_border_edittext"
+                            android:hint="Enter Name"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColorHint="#020116" />
+
+                        <com.tanvi.memorykeeper.font.FontEditText
+                            android:id="@+id/ed_contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_border_edittext"
+                            android:drawableLeft="@drawable/ic_contact"
+                            android:drawablePadding="10dp"
+                            android:hint="Contact No."
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColorHint="#020116" />
+
+                        <com.tanvi.memorykeeper.font.FontEditText
+                            android:id="@+id/ed_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_border_edittext"
+                            android:drawableLeft="@drawable/ic_email"
+                            android:drawablePadding="10dp"
+                            android:hint="Email"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColorHint="#020116" />
+
+                        <com.tanvi.memorykeeper.font.FontEditText
+                            android:id="@+id/ed_social"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_border_edittext"
+                            android:drawableLeft="@drawable/ic_social"
+                            android:drawablePadding="10dp"
+                            android:hint="Social Link"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColorHint="#020116" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="10dp"
+                      android:orientation="horizontal">
+
+                      <com.tanvi.iremeberyou.font.FontTextViewBold
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Remark Day" />
+
+                      <com.tanvi.iremeberyou.font.FontTextViewBold
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text=" *"
+                          android:textColor="#FF0101" />
+                  </LinearLayout>
+  -->
+
+
+                <com.tanvi.memorykeeper.font.FontEditText
+                    android:id="@+id/ed_insta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_border_edittext"
+                    android:drawableLeft="@drawable/ic_instagram"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColorHint="#020116"
+                    android:visibility="gone" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ry_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
