@@ -30,6 +30,15 @@
             android:layout_height="match_parent"
             android:id="@+id/ry_memory"/>
 
+        <com.tanvi.memorykeeper.font.RobotoTextView
+            android:layout_width="match_parent"
+            android:text="Add your first contact by pressing '+'"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/txt_nodata"
+            android:layout_height="wrap_content"/>
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnfloat_add"
             android:layout_width="wrap_content"

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity(), onMemoryListListener {
     }
 
     private fun get() {
-        class save : AsyncTask<Void, Void, Void>() {
+        class get : AsyncTask<Void, Void, Void>() {
             override fun doInBackground(vararg params: Void?): Void? {
                 arraylist.addAll(DatabaseKeeper(this@MainActivity).getDao().getalldata())
                 return null
@@ -62,11 +63,16 @@ class MainActivity : AppCompatActivity(), onMemoryListListener {
 
             override fun onPostExecute(result: Void?) {
                 super.onPostExecute(result)
+                if(arraylist.size<1){
+                    binding.txtNodata.visibility = View.VISIBLE
+                }else{
+                    binding.txtNodata.visibility = View.GONE
+                }
                 adapter?.notifyDataSetChanged()
             }
 
         }
-        save().execute()
+        get().execute()
 
     }
 
